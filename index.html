@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Website project template</title>
-</head>
-<script>
+  </head>
+  <!-- <script>
     const loadComponents = (id, url) =>  {
         fetch(url)
         .then((response) => response.text())
@@ -21,11 +25,106 @@
         loadComponents('contact', 'src/sections/contact.html');
         loadComponents('footer', 'src/sections/footer.html');
     }
-</script>
-<body>
-    <div id="header"></div>
-    <div id="hero"></div>
-    <div id="contact"></div>
+</script> -->
+  <body class="bg-gray-100">
+    <div id="header" class="px-4 py-2">
+      <div class="grid grid-cols-3 gap-10 place-items-end">
+        <div class="place-self-start justify-self-start">
+          <p>DE</p>
+          <p>EN</p>
+        </div>
+        <div class="place-self-center justify-self-center">
+          <p class="text-2xl font-bold text-[#000000]">Baumeister</p>
+        </div>
+        <div class="flex flex-col place-self-end items-start">
+          <div><a href="#">About</a></div>
+          <div><a href="#">Services</a></div>
+          <div class=""><a href="#">References</a></div>
+          <div><a href="#">Contact</a></div>
+        </div>
+      </div>
+      <div class="grid content-center m-10">
+        <div class="place-self-center">
+          <p class="">
+            We help you set<br />
+            focus and gain<br />
+            impact. By adding<br />
+            to the conversation,<br />
+            not to the noise.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="hero" class="px-10 py-2">
+      <div class="grid grid-cols-1">
+        <div class="place-self-center">
+          <p class="text-5xl font-[Outfit] font-normal leading-tight">
+            We are a Berlin-based communications agency <br />
+            specialising in helping companies and brands find <br />
+            their voice and position themselves. Whether it's <br />
+            brand building, identity sharpening, or <br />communication
+            strategy, we bring a fresh <br />perspective to established
+            structures, develop tailor-<br />made communication solutions, and
+            ensure that<br />
+            messages resonate. With over a decade of<br />
+            experience, we have honed our skills in giving brands<br />
+            their unmistakable identity and making them visible<br />
+            in the long term.
+          </p>
+        </div>
+      </div>
+      <div class="py-10"></div>
+      <div class="grid grid-cols-2 gap-3 py-10">
+        <div class="flex flex-col gap-16 place-self-center">
+          <p class="text-5xl font-semibold">Brand Strategy</p>
+          <p class="text-5xl font-[Outfit] font-semibold">
+            Corporate Identity &<br />
+            Website development
+          </p>
+          <p class="text-5xl font-[Outfit] font-semibold">SEO & copywriting</p>
+          <p class="text-5xl font-[Outfit] font-semibold">Media Relations</p>
+          <p class="text-5xl font-[Outfit] font-semibold">
+            Influencer relations
+          </p>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div id="contact" class="px-10 py-2 bg-yellow-300">
+      <div class="flex flex-col py-32" >
+        <div class="place-self-end">
+          <a href="https://acehotel.com/">Ace Hotel </a>
+          <a href="https://www.armedangels.com/">ARMEDANGELS</a>
+          <a href="#">BERLIN DESIGN WEEK</a>
+ <a href="#">Berliner Berg</a>
+<a href="#">BITE CLUB</a>
+<a href="#">Budweiser Budvar</a>
+<a href="#">ChungKing Noodles</a>
+<a href="#">Designpreis Brandenburg</a>
+<a href="#">Die Techniker</a>
+<a href="#">European Street Food Awards</a>
+<a href="#">Grundmann Dentistry</a>
+<a href="#">HORNBACH macht Schule</a>
+<a href="#">iF Design</a>
+<a href="#">Kopka</a>
+<a href="#">KLH Maßschuhe</a>
+<a href="#">Lode & Stijn</a>
+<a href="#">Luya</a>
+MEISSEN
+Motel Beer & Coffee
+PAPER & TEA
+rocket & basil
+Seeberger Gruppe
+Shiori
+SPOC Magazin
+stocubo
+STUR
+World of Coffee
+yamo
+</p>
+        </div>
+      </div>
+    </div>
     <div id="footer"></div>
-</body>
+  </body>
 </html>
