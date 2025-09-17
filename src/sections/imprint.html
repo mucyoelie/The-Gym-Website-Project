@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Baumeister</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
@@ -15,7 +17,6 @@
       }
     </style>
   </head>
-
   <body class="bg-neutral-50 text-[#00672E]">
     <!-- Header -->
     <header class="flex sticky top-0 justify-between items-start px-8 py-6">
@@ -38,9 +39,9 @@
     </header>
 
     <!-- Main content -->
-    <main class="grid grid-cols-3 gap-2 px-8 mx-64 mr-8 py-10 mt-28">
+    <main class="grid grid-cols-3 gap-12 px-8 mx-64 py-10 mt-28">
       <!-- Left column -->
-      <div class="space-y-24 text-4xl col-span-2">
+      <div class="space-y-12 text-5xl col-span-2">
         <div>
           <h2 class="font-bold uppercase text-lg">Imprint</h2>
           <p class="font-bold">Agentur Baumeister</p>
@@ -79,7 +80,58 @@
           </p>
         </div>
       </div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </main>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <!-- Red polygon section -->
+    <section class="flex items-center justify-center">
+      <svg
+        width="722"
+        height="418"
+        viewBox="0 0 722 418"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="m-auto w-80 md:w-[35rem] lg:w-[45.125rem]"
+      >
+        <path
+          d="M21 38.5L0.5 220L160.5 388L583.5 418L722 218.5L518.5 0L21 38.5Z"
+          fill="#E31C24"
+        />
+      </svg>
+    </section>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <!-- Footer -->
+    <footer class="flex justify-between px-8 py-10 text-xl">
+      <!-- Left -->
+      <div>
+        <p class="font-bold">Agentur Baumeister</p>
+        <p>Böckhstraße 13</p>
+        <p>10967 Berlin</p>
+      </div>
+
+      <!-- Center-left -->
+      <div>
+        <a
+          href="mailto:hallo@agentur-baumeister.com"
+          class="underline font-semibold"
+        >
+          hallo@agentur-baumeister.com
+        </a>
+        <p>+49 (0)30 - 490 827 87</p>
+      </div>
+
+      <!-- Center-right -->
+      <div class="font-semibold">
+        <a href="#" class="hover:underline">LinkedIn</a>
+        <a href="#" class="hover:underline">Instagram</a>
+      </div>
+
+      <!-- Right -->
+      <div class="flex flex-col space-y-1 font-semibold">
+        <a href="#" class="hover:underline">Impressum</a>
+        <a href="#" class="hover:underline">Datenschutz</a>
+      </div>
+    </footer>
   </body>
 </html>
