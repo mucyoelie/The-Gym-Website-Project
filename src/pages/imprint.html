@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baumeister</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <script>
+    const loadComponents = (id, url) => {
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+        });
+    };
+
+    window.onload = () => {
+      loadComponents("header", "../sections/header.html");
+      loadComponents("hero", "../sections/hero.html");
+      loadComponents("polygon", "../sections/red-polygon.html");
+      loadComponents("footer", "../sections/footer.html");
+    };
+  </script>
+  <body class="bg-background text-text-accent">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main content -->
+    <div id="hero"></div>
+
+    <!-- Red polygon section -->
+    <div id="polygon"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+  </body>
+</html>
