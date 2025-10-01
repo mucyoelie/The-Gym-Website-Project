@@ -3,18 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="/dist/output.css" />
     <title>Website project template</title>
   </head>
-
-  <body>
-    <div class="flex items-center justify-center h-screen">
-      <a
-        target="_blank"
-        href="./src/pages/imprint.html"
-        class="bg-amber-300 text-indigo-600 underline font-bold px-6 py-2"
-        >Imprint-Page🔗</a
-      >
-    </div>
+  <script>
+    const loadComponents = (id, url) => {
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+        });
+    };
+    window.onload = () => {
+      loadComponents("header", "src/sections/header.html");
+      loadComponents("hero", "src/sections/hero.html");
+      loadComponents("main", "src/sections/main.html");
+      loadComponents("contact", "src/sections/contact.html");
+      loadComponents("footer", "src/sections/footer.html");
+    };
+  </script>
+  <body class="bg-background">
+    <div id="header" class="sticky top-0 z-1"></div>
+    <div id="hero"></div>
+    <div id="main"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
   </body>
 </html>
