@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baumeister</title>
     <link rel="stylesheet" href="/dist/output.css" />
-    <title>Website project template</title>
   </head>
   <script>
     const loadComponents = (id, url) => {
@@ -14,24 +14,16 @@
           document.getElementById(id).innerHTML = html;
         });
     };
+
     window.onload = () => {
-      loadComponents("header", "src/sections/header.html");
-      loadComponents("hero", "src/sections/hero.html");
-      loadComponents("main", "src/sections/main.html");
-      loadComponents("contact", "src/sections/contact.html");
-      loadComponents("footer", "src/sections/footer.html");
+      loadComponents("header", "../sections/header.html");
+      loadComponents("info", "../sections/info.html");
+      loadComponents("footer", "../sections/footer.html");
     };
   </script>
-  <body class="bg-background">
+  <body class="bg-background text-text-accent">
     <div id="header" class="sticky top-0 z-1"></div>
-    <div id="hero"></div>
-    <div id="main"></div>
-    <div id="contact"></div>
+    <div id="info"></div>
     <div id="footer"></div>
-<<<<<<< HEAD
-    <a href="src/sections/privacy.html">Privacy</a>
-</body>
-=======
   </body>
->>>>>>> dev
 </html>
