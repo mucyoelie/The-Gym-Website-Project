@@ -1,41 +1,56 @@
-<main class="grid grid-cols-3 gap-6 px-8 ml-56 py-10 mt-28">
+<main
+  class="ml-4 mt-32 grid text-text-accent gap-32 text-2xl md:mx-16 md:mt-56 md:grid-cols-2 md:gap-20 lg:mx-36"
+>
   <!-- Left column -->
-  <div class="space-y-20 text-5xl col-span-2">
+  <div class="flex w-80 flex-col gap-10 md:w-[42.81rem] md:gap-20 lg:gap-24">
     <div>
-      <h2 class="font-bold uppercase text-lg">Imprint</h2>
-      <p class="font-bold">Agentur Baumeister</p>
-      <p>Katrein Baumeister</p>
-      <p>Böckhstraße 13</p>
-      <p>10967 Berlin</p>
+      <h4 class="pb-4 font-bold md:hidden md:text-xl lg:block lg:text-2xl">
+        IMPRINT
+      </h4>
+      <h4
+        class="hidden pb-4 font-bold md:block md:text-xl lg:hidden lg:text-2xl"
+      >
+        IMPRESSUM
+      </h4>
+      <h2 class="font-bold md:mb-3 md:text-3xl lg:text-5xl">
+        Agentur Baumeister
+      </h2>
+      <p class="md:mb-3 md:text-3xl lg:text-5xl">Katrein Baumeister</p>
+      <p class="md:mb-3 md:text-3xl lg:text-5xl">Böckhstraße 13</p>
+      <p class="md:mb-3 md:text-3xl lg:text-5xl">10967 Berlin</p>
     </div>
-
-    <div>
+    <div
+      class="flex w-[21rem] flex-col text-2xl md:w-[42.81rem] md:text-3xl lg:text-5xl"
+    >
       <p>+49 (0)30 - 490 827 87</p>
-      <p>hallo@agentur-baumeister.com</p>
+      <p class="md:hidden lg:block">hallo@agentur-baumeister.com</p>
+      <p class="hidden md:block lg:hidden">
+        hallo@agentur-<br />baumeister.com
+      </p>
     </div>
-
-    <div>
-      <h2 class="font-bold uppercase">UST-IDNR.</h2>
+    <div class="md:text-3xl lg:text-5xl">
+      <h2 class="font-bold">UST-IDNR.</h2>
       <p>DE 274 486 923</p>
     </div>
-
     <div>
-      <h2 class="font-bold uppercase">REGISTERED OFFICE</h2>
-      <p>Berlin, Deutschland</p>
+      <h2 class="font-bold md:text-3xl lg:text-5xl">REGISTERED OFFICE</h2>
+      <p class="hidden md:text-3xl lg:block lg:text-5xl">Berlin, Deutschland</p>
+      <p class="md:text-3xl lg:hidden lg:text-5xl">Berlin, Germany</p>
     </div>
   </div>
 
   <!-- Right column -->
-  <div class="flex items-end justify-end text-right">
-    <div class="text-xl leading-relaxed max-w-sm">
-      <h2 class="font-bold uppercase mb-2">Disclaimer</h2>
-      <p>
-        Despite all due care, no liability can be accepted for the accuracy,
-        completeness and up to-dateness of the information provided. The same
-        applies to third-party websites to which www.agentur-baumeister.com
-        refers by means of hyperlinks. Katrein Baumeister, Agentur Baumeister
-        accepts no liability for the content of these websites.
-      </p>
-    </div>
+  <div
+    class="flex flex-col gap-6 text-2xl md:ml-20 md:items-end md:justify-end md:gap-11 md:pr-8 md:text-end md:text-xl lg:gap-9 lg:pl-12 lg:text-2xl"
+  >
+    <h2 class="font-bold">DISCLAIMER</h2>
+    <p class="md:w-[18rem] lg:w-[22.19rem]">
+      Despite all due care, no liability can be accepted for the accuracy,
+      completeness and up to-dateness of the information provided. The same
+      applies to third-party websites to which www.agentur-baumeister.com refers
+      by means of hyperlinks. Katrein Baumeister, Agentur Baumeister accepts no
+      liability for the content of these websites.
+    </p>
   </div>
-</main>
+</div>
+
