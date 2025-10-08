@@ -7,16 +7,20 @@
     <title>Website project template</title>
   </head>
   <script>
-    const loadComponents = (id, url) => {
+    const loadComponents = (id, url, callback) => {
       fetch(url)
         .then((response) => response.text())
         .then((html) => {
           document.getElementById(id).innerHTML = html;
-        });
+          if (callback) callback();
+        })
+        .catch((error) => console.error(`Error loading ${url}:`, error));
     };
 
     window.onload = () => {
-      loadComponents("header", "src/sections/header.html");
+      loadComponents("header", "src/sections/header.html", () =>
+        import("./src/scripts/header.js")
+      );
       loadComponents("hero", "src/sections/hero.html");
       loadComponents("main", "src/sections/main.html");
       loadComponents("contact", "src/sections/contact.html");
