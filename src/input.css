@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 * {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 @theme {
@@ -15,4 +15,25 @@
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+/* Define animation for shapes */
+@keyframes moveIn {
+  from {
+    transform: translateY(50px); /* Starting position off-screen */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* End position */
+    opacity: 1;
+  }
+}
+
+.shape {
+  opacity: 0;
+  animation: moveIn 1s forwards;
+}
+
+.shape.active {
+  animation: moveIn 1s forwards;
 }
