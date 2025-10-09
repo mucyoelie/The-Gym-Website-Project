@@ -18,9 +18,7 @@
     };
 
     window.onload = () => {
-      loadComponents("header", "src/sections/header.html", () =>
-        import("./src/scripts/header.js")
-      );
+      loadComponents("header", "src/sections/header.html");
       loadComponents("hero", "src/sections/hero.html");
       loadComponents("main", "src/sections/main.html");
       loadComponents("contact", "src/sections/contact.html");
@@ -35,4 +33,5 @@
     <div id="footer"></div>
   </body>
   <script src="/src/script.js"></script>
+  <script src="./src/scripts/header.js"></script>
 </html>

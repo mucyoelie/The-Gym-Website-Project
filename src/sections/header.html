@@ -11,40 +11,36 @@
     <div
       class="inline-block place-self-center justify-self-center [clip-path:polygon(3%_11%,_0%_62%,_14%_100%,_89%_93%,_100%_63%,_94%_26%,_75%_0%,_3%_11%)] md:[clip-path:none]"
     >
-      <a href="/"
+      <p
         class="text-[32px] md:text-[48px] md:px-0 px-3 whitespace-nowrap font-semibold bg-background md:bg-transparent"
       >
         Baumeister
-      </a>
+      </p>
     </div>
     <div class="hidden xl:flex flex-col text-right">
-      <a class="text-[20px] font-normal" href="#aboutus">About</a>
-      <a class="text-[20px] font-normal" href="/src/pages/privacy.html">Services</a>
-      <a class="text-[20px] font-normal" href="#brands">References</a>
-      <a class="text-[20px] font-normal" href="/src/pages/imprint.html">Contact</a>
-    </div>
-    <div class="xl:hidden justify-self-end">
-      <svg
-        width="39"
-        height="23"
-        viewBox="0 0 39 23"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+      <a class="text-[20px] font-normal" href="#">About</a>
+      <a class="text-[20px] font-normal" href="/src/pages/privacy.html"
+        >Services</a
       >
       <a class="text-[20px] font-normal" href="#">References</a>
       <a class="text-[20px] font-normal" href="/src/pages/imprint.html"
         >Contact</a
       >
     </div>
-    <div class="relative justify-self-end">
-      <button id="opener" data-href="/src/pages/imprint.html">
-        <div class="justify-self-end h-[30px] flex items-center xl:hidden">
+    <div class="relative justify-self-end z-50">
+      <button
+        id="opener"
+        onclick="openNav()"
+        class="justify-self-end h-[30px] flex items-center xl:hidden relative z-50"
+      >
+        <div class="">
           <svg
             width="39"
             height="23"
             viewBox="0 0 39 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            class="in-aria-expanded:hidden"
           >
             <path
               d="M1.10811 2.11842L0 12.1053L8.64865 21.3493L31.5135 23L39 12.0227L28 0L1.10811 2.11842Z"
@@ -77,14 +73,19 @@
           </svg>
         </div>
       </button>
-      <button id="closer">
-        <div class="hidden justify-self-end xl:hidden">
+      <button
+        onclick="closeNav()"
+        id="closer"
+        class="hidden justify-self-end xl:hidden relative z-50"
+      >
+        <div class="">
           <svg
             width="39"
             height="30"
             viewBox="0 0 39 30"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            class=""
           >
             <path
               d="M1.10811 9.11842L0 19.1053L8.64865 28.3493L31.5135 30L39 19.0227L28 7L1.10811 9.11842Z"
@@ -97,6 +98,43 @@
           </svg>
         </div>
       </button>
+    </div>
+  </div>
+  <div
+    class="mobile-menu hidden xl:hidden bg-background fixed inset-0 z-40 flex flex-col items-center justify-center"
+  >
+    <div
+      class="absolute space-y-10 font-bold top-20 z-50 text-[rgba(0,103,46,1)] text-[40px] mt-20 text-center"
+    >
+      <p class="text-[24px] font-normal mb-6">About</p>
+      <p class="text-[24px] font-normal mb-6">Services</p>
+      <p class="text-[24px] font-normal mb-6">References</p>
+      <p class="text-[24px] font-normal mb-6">Contact</p>
+    </div>
+
+    <div
+      class="relative top-[200px] z-0 w-full h-[900px] overflow-hidden items-center "
+    >
+      <div
+        class="bg-[#FF93C8] [clip-path:polygon(0%_17.90%,42.36%_0%,61.91%_0.94%,99.39%_74.46%,53.77%_99.74%)] w-[97.4px] h-[155.6px] md:w-[206.4px] md:h-[329.7px] xl:w-[236px] xl:h-[377px] absolute top-[296px] left-[254px] md:top-[236.07px] md:left-[536.13px] xl:top-[277px] xl:left-[599px]"
+      ></div>
+
+      <div
+        class="bg-[#FFE800] [clip-path:polygon(3.36%_64.86%,40.10%_2.36%,89.51%_0%,100%_33.61%,64.11%_75.94%,31.62%_100%,0%_99.97%,0.01%_79.45%)] w-[299.6346435546875px] h-[360.5054626464844px] absolute top-[287px] left-[1px]"
+      ></div>
+
+      <div
+        class="bg-[rgba(0,103,46,1)] [clip-path:polygon(71.18%_0%,18.84%_11.77%,0%_39.76%,14.28%_76.55%,100%_99.85%,100%_17.55%)] w-[167.56427001953125px] h-[320.47698974609375px] absolute top-[386px] left-[227px]"
+      ></div>
+      <div
+        class="bg-[#0F2CCE] [clip-path:polygon(0%_60.48%,42.68%_100%,73.81%_100%,100%_45.36%,90.53%_0%,53.88%_1.12%,38.74%_5.04%,0%_60.48%)] w-[267px] h-[250px] absolute top-[359px] left-[114px]"
+      ></div>
+      <div
+        class="bg-[#E31C24] [clip-path:polygon(3.14%_9.31%,0.31%_52.61%,22.39%_92.74%,80.76%_99.88%,99.87%_52.24%,71.81%_0.12%,3.14%_9.31%)] w-[297.77740478515625px] h-[172.51690673828125px] absolute top-[497.21px] left-[82.92px]"
+      ></div>
+      <div
+        class="bg-[#00672E] [clip-path:polygon(34.77%_99.58%,0%_41.70%,16.11%_0%,61.48%_11.15%,99.55%_64.43%,79.73%_98.24%,34.77%_99.58%)] w-[216.2652130126953px] h-[222.86874389648438px] absolute top-[341px] left-[11px]"
+      ></div>
     </div>
   </div>
 </div>
