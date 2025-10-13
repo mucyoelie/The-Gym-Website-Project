@@ -1,13 +1,9 @@
-// Updated header.js
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Use event delegation for dynamically loaded content
   document.addEventListener('click', function(e) {
-    // Open nav when opener is clicked
     if (e.target.id === 'opener' || e.target.closest('#opener')) {
       openNav();
     }
-    
-    // Close nav when closer is clicked
     if (e.target.id === 'closer' || e.target.closest('#closer')) {
       closeNav();
     }
@@ -22,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.remove("hidden");
       opener.classList.add("hidden");
       closer.classList.remove("hidden");
+      document.body.style.overflow = 'hidden';
       mobileMenu.style.width = "100%";
     }
   };
@@ -35,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.add("hidden");
       opener.classList.remove("hidden");
       closer.classList.add("hidden");
+      document.body.style.overflow = ''; 
       mobileMenu.style.width = "0";
     }
   };

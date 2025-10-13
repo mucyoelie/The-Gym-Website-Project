@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="/dist/output.css" />
   </head>
   <script>
-    const loadComponents = (id, url) => {
+    const loadComponents = (id, url, callback) => {
       fetch(url)
         .then((response) => response.text())
         .then((html) => {
           document.getElementById(id).innerHTML = html;
-        });
+          if (callback) callback();
+        })
+        .catch((error) => console.error(`Error loading ${url}:`, error));
     };
 
     window.onload = () => {
@@ -31,4 +33,5 @@
     <!-- Footer -->
     <div id="footer"></div>
   </body>
+  <script src="/src/scripts/header.js"></script>
 </html>
