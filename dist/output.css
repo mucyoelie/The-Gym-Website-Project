@@ -206,6 +206,9 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
   .top-\[5\%\] {
     top: 5%;
   }
@@ -359,6 +362,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .h-\[87px\] {
     height: 87px;
   }
@@ -431,6 +437,9 @@
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .scale-\[0\.4\] {
     scale: 0.4;
   }
@@ -451,6 +460,12 @@
   }
   .scale-\[0\.75\] {
     scale: 0.75;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .list-inside {
     list-style-position: inside;
@@ -536,6 +551,10 @@
   }
   .overflow-x-hidden {
     overflow-x: hidden;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-0 {
     border-style: var(--tw-border-style);
@@ -706,6 +725,10 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .\[clip-path\:polygon\(3\%_11\%\,_0\%_62\%\,_14\%_100\%\,_89\%_93\%\,_100\%_63\%\,_94\%_26\%\,_75\%_0\%\,_3\%_11\%\)\] {
     clip-path: polygon(3% 11%, 0% 62%, 14% 100%, 89% 93%, 100% 63%, 94% 26%, 75% 0%, 3% 11%);
@@ -1672,6 +1695,26 @@
 .shape.active {
   animation: moveIn 1s forwards;
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -1689,6 +1732,11 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-scale-x {
   syntax: "*";
@@ -1708,10 +1756,16 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
