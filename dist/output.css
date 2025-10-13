@@ -206,9 +206,6 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
   .top-\[5\%\] {
     top: 5%;
   }
@@ -365,6 +362,12 @@
   .table {
     display: table;
   }
+  .h-48 {
+    height: calc(var(--spacing) * 48);
+  }
+  .h-190 {
+    height: calc(var(--spacing) * 190);
+  }
   .h-\[87px\] {
     height: 87px;
   }
@@ -403,6 +406,9 @@
   }
   .w-80 {
     width: calc(var(--spacing) * 80);
+  }
+  .w-330 {
+    width: calc(var(--spacing) * 330);
   }
   .w-\[21rem\] {
     width: 21rem;
@@ -946,6 +952,21 @@
       display: none;
     }
   }
+  .md\:h-60 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 60);
+    }
+  }
+  .md\:h-96 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 96);
+    }
+  }
+  .md\:h-244 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 244);
+    }
+  }
   .md\:h-\[99px\] {
     @media (width >= 48rem) {
       height: 99px;
@@ -959,6 +980,16 @@
   .md\:h-\[692\.7197742590904px\] {
     @media (width >= 48rem) {
       height: 692.7197742590904px;
+    }
+  }
+  .md\:w-96 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 96);
+    }
+  }
+  .md\:w-470 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 470);
     }
   }
   .md\:w-\[18rem\] {
@@ -1245,6 +1276,16 @@
       display: none;
     }
   }
+  .lg\:h-96 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 96);
+    }
+  }
+  .lg\:h-420 {
+    @media (width >= 64rem) {
+      height: calc(var(--spacing) * 420);
+    }
+  }
   .lg\:h-\[100vh\] {
     @media (width >= 64rem) {
       height: 100vh;
@@ -1260,6 +1301,11 @@
       height: 1300px;
     }
   }
+  .lg\:w-722 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 722);
+    }
+  }
   .lg\:w-\[22\.19rem\] {
     @media (width >= 64rem) {
       width: 22.19rem;
@@ -1268,6 +1314,11 @@
   .lg\:w-\[722px\] {
     @media (width >= 64rem) {
       width: 722px;
+    }
+  }
+  .lg\:w-full {
+    @media (width >= 64rem) {
+      width: 100%;
     }
   }
   .lg\:max-w-3xl {
