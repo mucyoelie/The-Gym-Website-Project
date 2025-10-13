@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener('click', function(e) {
     if (e.target.id === 'opener' || e.target.closest('#opener')) {
@@ -8,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
       closeNav();
     }
   });
-
   window.openNav = function() {
     const mobileMenu = document.querySelector(".mobile-menu");
     const opener = document.getElementById("opener");

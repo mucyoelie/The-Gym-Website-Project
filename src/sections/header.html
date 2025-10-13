@@ -2,14 +2,14 @@
   <div
     class="py-10 md:py-5 xl:py-4 mx-4 overflow-hidden xl:px-2 grid grid-cols-[auto_1fr_auto] lg:grid-cols-3 lg:gap-10 items-center lg:mx-6"
   >
-    <div class="place-self-start justify-self-start">
+    <div class="place-self-start justify-self-start z-50">
       <a href="/index.html">
         <p class="text[15px] lg:text-[20px] font-normal">DE</p>
         <p class="text[15px] lg:text-[20px] font-normal">EN</p>
       </a>
     </div>
     <div
-      class="inline-block place-self-center justify-self-center [clip-path:polygon(3%_11%,_0%_62%,_14%_100%,_89%_93%,_100%_63%,_94%_26%,_75%_0%,_3%_11%)] md:[clip-path:none]"
+      class="inline-block place-self-center justify-self-center [clip-path:polygon(3%_11%,_0%_62%,_14%_100%,_89%_93%,_100%_63%,_94%_26%,_75%_0%,_3%_11%)] md:[clip-path:none] z-50"
     >
     <a href="/index.html"><p
         class="text-[32px] md:text-[48px] md:px-0 px-3 whitespace-nowrap font-semibold bg-background md:bg-transparent"
@@ -24,7 +24,7 @@
         >Services</a
       >
       <a class="text-[20px] font-normal" href="#contact">References</a>
-      <a class="text-[20px] font-normal" href=""
+      <a class="text-[20px] font-normal" href="#" onclick="return false;"
         >Contact</a
       >
     </div>
@@ -104,22 +104,23 @@
   <div
     class="mobile-menu hidden xl:hidden bg-background fixed inset-0 z-40 flex flex-col items-center pt-32 overflow-y-auto"
   >
+  
     <div
       class="absolute space-y-16 font-bold top-20 z-50 text-[rgba(0,103,46,1)] text-[40px] mt-20 text-center flex flex-col"
     >
-      <a class="text-[32px] md:text-[48px] font-semibold mb-12" href="#aboutUs" onclick="closeNav()">About</p>
-      <a class="text-[32px] md:text-[48px] font-semibold mb-12" href="#services" onclick="closeNav()">Services</a>
-      <a class="text-[32px] md:text-[48px] font-semibold mb-12" href="#contact" onclick="closeNav()">References</a>
-      <a class="text-[32px] md:text-[48px] font-semibold mb-12 z-50" href="#" onclick="closeNav()">Contact</a>
+      <a class="text-[32px] md:text-[48px] font-semibold mb-12 md:mb-6" href="#aboutUs" onclick="closeNav()">About</p>
+      <a class="text-[32px] md:text-[48px] font-semibold mb-12 md:mb-6" href="#services" onclick="closeNav()">Services</a>
+      <a class="text-[32px] md:text-[48px] font-semibold mb-12 md:mb-6" href="#contact" onclick="closeNav()">References</a>
+      <a class="text-[32px] md:text-[48px] font-semibold mb-12 md:mb-6" href="#" onclick="return false;">Contact</a>
       
     </div>
     <div class="top-[200px] z-0 w-full h-[500px] lg:h-[800px] overflow-hidden flex items-center">
-     <img class="w-[97.40189361572266px] h-[155.59539794921875px] md:w-[206.4038543701172px] md:h-[329.7214050292969px] lg:w-[236px] lg:h-[377px] absolute top-[442px] left-[253px] md:top-[455.07px] md:left-[536.13px] lg:top-[240px] lg:left-[600px]" src="/src/img/Vector 1.png" alt="">
-     <img class="w-[299.6346435546875px] h-[360.5054626464844px] md:w-[634.9542236328125px] md:h-[763.9452514648438px] lg:w-[650px] lg:h-[782px] absolute top-[433px] md:top-[436px] lg:top-[180px]" src="/src/img/Vector 2.png" alt="">
-     <img class="w-[167.56427001953125px] h-[320.47698974609375px] md:w-[355.0845642089844px] md:h-[679.12109375px] lg:w-[375px] lg:h-[682px] absolute top-[532px]  left-[226px] md:top-[645.79px] md:left-[478.92px] lg:top-[360px] lg:left-[520px]" src="/src/img/Vector 3.png" alt="">
-     <img class="w-[267px] h-[250px] md:w-[565.79833984375px] md:h-[529.773681640625px] lg:w-[584px] lg:h-[550px] absolute top-[505px] left-[113px] md:top-[588.57px] md:left-[239.46px] lg:top-[320px] lg:left-[280px]" src="/src/img/Vector 4.png" alt="">
-     <img class="w-[297.77740478515625px] h-[172.51690673828125px] md:w-[631.0185546875px] lg:w-[646px] lg:h-[375px] md:h-[365.5796813964844px] absolute top-[643.21px] left-[81.92px] md:top-[881.46px] md:left-[173.61px] lg:top-[560px] lg:left-[180px]" src="/src/img/Vector 5.png" alt="">
-     <img class="w-[216.2652130126953px] h-[222.86874389648438px] md:w-[458.2864990234375px] lg:w-[472px] lg:h-[485px] md:h-[472.2799987792969px] absolute top-[487px] left-[10px] md:top-[550.43px] md:left-[21.19px] lg:top-[290px] lg:left-[20px]" src="/src/img/Vector 6.png" alt="">
+     <img class="w-[97.40189361572266px] h-[155.59539794921875px] md:w-[206.4038543701172px] md:h-[329.7214050292969px] absolute top-[442px] left-[253px] md:top-[455.07px] md:left-[536.13px]" src="/src/img/Vector 1.png" alt="">
+     <img class="w-[299.6346435546875px] h-[360.5054626464844px] md:w-[634.9542236328125px] md:h-[763.9452514648438px] absolute top-[433px] md:top-[436px]" src="/src/img/Vector 2.png" alt="">
+     <img class="w-[167.56427001953125px] h-[320.47698974609375px] md:w-[355.0845642089844px] md:h-[679.12109375px] absolute top-[532px]  left-[226px] md:top-[645.79px] md:left-[478.92px]" src="/src/img/Vector 3.png" alt="">
+     <img class="w-[267px] h-[250px] md:w-[565.79833984375px] md:h-[529.773681640625px] absolute top-[505px] left-[113px] md:top-[588.57px] md:left-[239.46px]" src="/src/img/Vector 4.png" alt="">
+     <img class="w-[297.77740478515625px] h-[172.51690673828125px] md:w-[631.0185546875px] md:h-[365.5796813964844px] absolute top-[643.21px] left-[81.92px] md:top-[881.46px] md:left-[173.61px]" src="/src/img/Vector 5.png" alt="">
+     <img class="w-[216.2652130126953px] h-[222.86874389648438px] md:w-[458.2864990234375px] md:h-[472.2799987792969px] absolute top-[487px] left-[10px] md:top-[550.43px] md:left-[21.19px]" src="/src/img/Vector 6.png" alt="">
     </div>
     <!-- <div
       class="relative top-[200px] z-0 w-full h-[900px] overflow-hidden items-center "
