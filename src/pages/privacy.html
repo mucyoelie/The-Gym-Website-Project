@@ -20,12 +20,14 @@
     window.onload = () => {
       loadComponents("header", "../sections/header.html");
       loadComponents("policy", "../sections/policy.html");
+      loadComponents("red_polygon", "../sections/red_polygon.html");
       loadComponents("footer", "../sections/footer.html");
     };
   </script>
   <body class="bg-background text-text-accent">
-    <div id="header" class="sticky top-0 z-1"></div>
+    <div id="header" class="sticky top-0 z-100"></div>
     <div id="policy"></div>
+    <div id="red_polygon" class="hidden md:block"></div>
     <div id="footer"></div>
   </body>
   <script src="/src/scripts/header.js" defer></script>
