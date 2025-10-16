@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baumeister</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <script>
+    const loadComponents = (id, url) => {
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+        });
+    };
+
+    window.onload = () => {
+      loadComponents("header", "../sections/header.html");
+      loadComponents("info", "../sections/info.html");
+      loadComponents("footer", "../sections/footer.html");
+    };
+  </script>
+  <body class="bg-background text-text-accent">
+    <!-- Header -->
+    <div id="header" class="sticky top-0"></div>
+
+    <!-- Main content -->
+    <div id="info"></div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+  </body>
+</html>

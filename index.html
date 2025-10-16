@@ -18,13 +18,15 @@
     window.onload = () => {
       loadComponents("header", "src/sections/header.html");
       loadComponents("hero", "src/sections/hero.html");
+      loadComponents("main", "src/sections/main.html");
       loadComponents("contact", "src/sections/contact.html");
       loadComponents("footer", "src/sections/footer.html");
     };
   </script>
-  <body>
-    <div id="header"></div>
+  <body class="bg-background">
+    <div id="header" class="sticky top-0 z-10"></div>
     <div id="hero"></div>
+    <div id="main"></div>
     <div id="contact"></div>
     <div id="footer"></div>
   </body>
