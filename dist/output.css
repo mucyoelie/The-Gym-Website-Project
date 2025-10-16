@@ -338,12 +338,6 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .my-32 {
-    margin-block: calc(var(--spacing) * 32);
-  }
-  .mt-12 {
-    margin-top: calc(var(--spacing) * 12);
-  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
@@ -617,9 +611,6 @@
   .bg-\[rgba\(0\,103\,46\,1\)\] {
     background-color: rgba(0,103,46,1);
   }
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
-  }
   .bg-background {
     background-color: var(--color-background);
   }
@@ -656,8 +647,14 @@
   .py-32 {
     padding-block: calc(var(--spacing) * 32);
   }
-  .pt-12 {
-    padding-top: calc(var(--spacing) * 12);
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
   }
   .pt-24 {
     padding-top: calc(var(--spacing) * 24);
@@ -665,14 +662,14 @@
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
   }
-  .pt-40 {
-    padding-top: calc(var(--spacing) * 40);
-  }
-  .pt-48 {
-    padding-top: calc(var(--spacing) * 48);
-  }
   .pt-60 {
     padding-top: calc(var(--spacing) * 60);
+  }
+  .pt-72 {
+    padding-top: calc(var(--spacing) * 72);
+  }
+  .pt-80 {
+    padding-top: calc(var(--spacing) * 80);
   }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
@@ -834,6 +831,11 @@
   .sm\:pt-0 {
     @media (width >= 40rem) {
       padding-top: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:pt-60 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 60);
     }
   }
   .md\:top-\[10\%\] {
@@ -1250,19 +1252,9 @@
       padding-block: calc(var(--spacing) * 24);
     }
   }
-  .md\:pt-20 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 20);
-    }
-  }
   .md\:pt-40 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 40);
-    }
-  }
-  .md\:pt-72 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 72);
     }
   }
   .md\:pr-0 {
@@ -1520,11 +1512,6 @@
   .lg\:py-48 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 48);
-    }
-  }
-  .lg\:pt-10 {
-    @media (width >= 64rem) {
-      padding-top: calc(var(--spacing) * 10);
     }
   }
   .lg\:pt-24 {
