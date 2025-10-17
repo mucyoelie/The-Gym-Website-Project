@@ -195,6 +195,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .sticky {
     position: sticky;
   }
@@ -598,9 +601,6 @@
   }
   .pt-32 {
     padding-top: calc(var(--spacing) * 32);
-  }
-  .pt-60 {
-    padding-top: calc(var(--spacing) * 60);
   }
   .pt-80 {
     padding-top: calc(var(--spacing) * 80);
@@ -1101,11 +1101,6 @@
   .md\:py-24 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 24);
-    }
-  }
-  .md\:pt-72 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 72);
     }
   }
   .md\:pr-0 {
