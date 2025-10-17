@@ -7,12 +7,14 @@
     <title>Website project - Baumeister</title>
   </head>
   <script>
-    const loadComponents = (id, url) => {
+    const loadComponents = (id, url, callback) => {
       fetch(url)
         .then((response) => response.text())
         .then((html) => {
           document.getElementById(id).innerHTML = html;
-        });
+          if (callback) callback();
+        })
+        .catch((error) => console.error(`Error loading ${url}:`, error));
     };
 
     window.onload = () => {
@@ -20,6 +22,7 @@
       loadComponents("hero", "src/sections/hero.html");
       loadComponents("main", "src/sections/main.html");
       loadComponents("contact", "src/sections/contact.html");
+      loadComponents("red_polygon", "src/sections/red_polygon.html");
       loadComponents("footer", "src/sections/footer.html");
     };
   </script>
@@ -28,8 +31,10 @@
     <div id="hero"></div>
     <div id="main"></div>
     <div id="contact"></div>
+    <div id="red_polygon"></div>
     <div id="footer"></div>
   </body>
-
-  <script src="/src/script.js"></script>
+  <script src="/src/scripts/script.js" defer></script>
+  <script src="/src/scripts/header.js" defer></script>
+  <script src="/src/scripts/move.js"></script>
 </html>
