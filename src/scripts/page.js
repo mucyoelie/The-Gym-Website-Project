@@ -18,33 +18,29 @@ const setSvgColors = (color) => {
 const applySavedColor = () => {
   const savedColor = localStorage.getItem('svgColor');
   if (!savedColor) return;
+  setSvgColors(savedColor);
+};
 
-  const tryApply = () => {
-    const openerSvg = document.querySelector('#opener svg path:first-of-type');
-    const closerSvg = document.querySelector('#closer svg path:first-of-type');
+
+// ✅ Wait for header/footer to load before running color logic
+document.addEventListener('DOMContentLoaded', () => {
+  const waitForSvg = () => {
+    const openerSvg = document.querySelector('#opener svg path');
+    const closerSvg = document.querySelector('#closer svg path');
 
     if (openerSvg && closerSvg) {
-      setSvgColors(savedColor);
+      applySavedColor();
     } else {
-      setTimeout(tryApply, 100);
+      setTimeout(waitForSvg, 100); // retry until SVGs exist
     }
   };
 
-  tryApply();
-};
+  waitForSvg();
+});
 
 
-const handleLinkClick = (e) => {
-  e.preventDefault();
-  setSvgColors('#00672E');
-
-  setTimeout(() => {
-    window.location.href = e.currentTarget.href;
-  }, 150);
-};
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
+// Optional: reapply when new elements are added dynamically
+const observer = new MutationObserver(() => {
   applySavedColor();
 });
+observer.observe(document.body, { childList: true, subtree: true });
