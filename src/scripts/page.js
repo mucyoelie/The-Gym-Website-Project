@@ -13,33 +13,18 @@ const setSvgColors = (color) => {
   }
 };
 
-
-// Apply saved color when SVGs exist 
 const applySavedColor = () => {
   const savedColor = localStorage.getItem('svgColor');
   if (!savedColor) return;
   setSvgColors(savedColor);
 };
 
-
-// ✅ Wait for header/footer to load before running color logic
-document.addEventListener('DOMContentLoaded', () => {
-  const waitForSvg = () => {
-    const openerSvg = document.querySelector('#opener svg path');
-    const closerSvg = document.querySelector('#closer svg path');
-
-    if (openerSvg && closerSvg) {
-      applySavedColor();
-    } else {
-      setTimeout(waitForSvg, 100); // retry until SVGs exist
-    }
-  };
-
-  waitForSvg();
+// ✅ Wait for custom event (header fully loaded)
+document.addEventListener('headerLoaded', () => {
+  applySavedColor();
 });
 
-
-// Optional: reapply when new elements are added dynamically
+// Optional: reapply if new elements appear dynamically
 const observer = new MutationObserver(() => {
   applySavedColor();
 });
