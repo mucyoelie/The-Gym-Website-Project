@@ -28,6 +28,7 @@
     --font-weight-bold: 700;
     --leading-tight: 1.25;
     --leading-relaxed: 1.625;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-text-accent: #00672e;
@@ -342,6 +343,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
@@ -441,6 +445,9 @@
   .max-w-5xl {
     max-width: var(--container-5xl);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .origin-top-left {
     transform-origin: 0 0;
   }
@@ -449,6 +456,9 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .list-disc {
     list-style-type: disc;
@@ -534,6 +544,10 @@
   }
   .overflow-y-auto {
     overflow-y: auto;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-0 {
     border-style: var(--tw-border-style);
@@ -707,6 +721,14 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
   }
   .\[clip-path\:polygon\(0\%_17\.90\%\,42\.36\%_0\%\,61\.91\%_0\.94\%\,99\.39\%_74\.46\%\,53\.77\%_99\.74\%\)\] {
     clip-path: polygon(0% 17.90%,42.36% 0%,61.91% 0.94%,99.39% 74.46%,53.77% 99.74%);
@@ -1196,6 +1218,11 @@
       top: 95vh;
     }
   }
+  .lg\:left-\[6px\] {
+    @media (width >= 64rem) {
+      left: 6px;
+    }
+  }
   .lg\:left-\[10px\] {
     @media (width >= 64rem) {
       left: 10px;
@@ -1224,6 +1251,11 @@
   .lg\:left-\[675px\] {
     @media (width >= 64rem) {
       left: 675px;
+    }
+  }
+  .lg\:left-\[px\] {
+    @media (width >= 64rem) {
+      left: px;
     }
   }
   .lg\:order-1 {
@@ -1578,6 +1610,11 @@
       width: 468.5589294433594px;
     }
   }
+  .xl\:w-\[506px\] {
+    @media (width >= 80rem) {
+      width: 506px;
+    }
+  }
   .xl\:w-\[524px\] {
     @media (width >= 80rem) {
       width: 524px;
@@ -1671,14 +1708,54 @@
       top: 65vh;
     }
   }
+  .\32 xl\:left-\[20px\] {
+    @media (width >= 96rem) {
+      left: 20px;
+    }
+  }
+  .\32 xl\:left-\[38rem\] {
+    @media (width >= 96rem) {
+      left: 38rem;
+    }
+  }
+  .\32 xl\:left-\[40rem\] {
+    @media (width >= 96rem) {
+      left: 40rem;
+    }
+  }
+  .\32 xl\:left-\[42rem\] {
+    @media (width >= 96rem) {
+      left: 42rem;
+    }
+  }
   .\32 xl\:left-\[45rem\] {
     @media (width >= 96rem) {
       left: 45rem;
     }
   }
+  .\32 xl\:left-\[50px\] {
+    @media (width >= 96rem) {
+      left: 50px;
+    }
+  }
+  .\32 xl\:left-\[80px\] {
+    @media (width >= 96rem) {
+      left: 80px;
+    }
+  }
+  .\32 xl\:left-\[198px\] {
+    @media (width >= 96rem) {
+      left: 198px;
+    }
+  }
   .\32 xl\:left-\[250px\] {
     @media (width >= 96rem) {
       left: 250px;
+    }
+  }
+  .\32 xl\:left-\[280px\] {
+    @media (width >= 96rem) {
+      left: 280px;
     }
   }
   .\32 xl\:left-\[398px\] {
@@ -1691,6 +1768,16 @@
       left: 480px;
     }
   }
+  .\32 xl\:left-\[550px\] {
+    @media (width >= 96rem) {
+      left: 550px;
+    }
+  }
+  .\32 xl\:left-\[650px\] {
+    @media (width >= 96rem) {
+      left: 650px;
+    }
+  }
   .\32 xl\:left-\[750px\] {
     @media (width >= 96rem) {
       left: 750px;
@@ -1701,9 +1788,19 @@
       left: 850px;
     }
   }
+  .\32 xl\:left-\[1000px\] {
+    @media (width >= 96rem) {
+      left: 1000px;
+    }
+  }
   .\32 xl\:left-\[1200px\] {
     @media (width >= 96rem) {
       left: 1200px;
+    }
+  }
+  .\32 xl\:left-\[rem\] {
+    @media (width >= 96rem) {
+      left: rem;
     }
   }
 }
@@ -1790,6 +1887,15 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-scale-x {
   syntax: "*";
   inherits: false;
@@ -1817,6 +1923,8 @@
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
+      --tw-ease: initial;
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
