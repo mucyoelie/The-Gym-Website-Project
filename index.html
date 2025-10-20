@@ -3,30 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/dist/output.css" />
-    <title>Website project template</title>
+    <link rel="stylesheet" href="./dist/output.css" />
+    <title>Website project - Baumeister</title>
   </head>
   <script>
-    const loadComponents = (id, url) => {
+    const loadComponents = (id, url, callback) => {
       fetch(url)
         .then((response) => response.text())
         .then((html) => {
           document.getElementById(id).innerHTML = html;
-        });
+          if (callback) callback();
+        })
+        .catch((error) => console.error(`Error loading ${url}:`, error));
     };
+
     window.onload = () => {
       loadComponents("header", "src/sections/header.html");
       loadComponents("hero", "src/sections/hero.html");
       loadComponents("main", "src/sections/main.html");
       loadComponents("contact", "src/sections/contact.html");
+      loadComponents("red_polygon", "src/sections/red_polygon.html");
       loadComponents("footer", "src/sections/footer.html");
     };
   </script>
   <body class="bg-background">
-    <div id="header" class="sticky top-0 z-1"></div>
+    <div id="header" class="sticky top-0 z-100"></div>
     <div id="hero"></div>
     <div id="main"></div>
     <div id="contact"></div>
+    <div id="red_polygon"></div>
     <div id="footer"></div>
   </body>
+  <script src="/src/scripts/script.js" defer></script>
+  <script src="/src/scripts/header.js" defer></script>
+  <script src="/src/scripts/move.js"></script>
 </html>
